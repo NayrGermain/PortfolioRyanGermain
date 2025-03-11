@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 /* Navbar fixe */
 .navbar {
     position: fixed;
     top: 0;
     right: 20px;
-    /*background: rgba(26, 26, 26, 0.8);*/
     padding: 10px;
     border-radius: 10px;
     display: flex;
@@ -41,16 +41,37 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
 body {
-    background-color: #0d0d0d;
+    background:#011f4b; /* Couleur de fond par défaut */
+    background-image: linear-gradient(45deg, #010556, #1c377b, #281756, #2a074d);
+    background-size: 600% 600%;
     color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 200vh;
+    display: block;
+    height: 100vh;
+    margin: 0;
+    padding-top: 80px;
+    transition: background-image 1s ease-in-out; /* Transition sur background-image uniquement */
+}
+
+/* Mode gradient */
+.gradient-bg {
+    animation: gradientAnimation 16s ease infinite;
+}
+
+/* Mode noir */
+.black-bg {
+    background-image: none; /* Supprime uniquement l’image */
 }
 
 /* Carte principale */
@@ -59,17 +80,17 @@ body {
     padding: 2rem;
     border-radius: 20px;
     text-align: center;
+    justify-content: center;
     width: 500px;
-    margin: 100px auto; /* Centre horizontalement et garde un espace en haut */
+    height: 380px;
+    margin: 20px auto; /* Centre horizontalement et garde un espace en haut */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-
-
 /* Photo de profil */
 .profile-pic {
-    width: 80px;
-    height: 80px;
+    width: 130px;
+    height: 130px;
     margin: 0 auto 10px;
     border-radius: 50%;
     overflow: hidden;
@@ -132,10 +153,10 @@ body {
     height: 40px;
 }
 
-
+/* Section "À propos de moi" */
 .text-block {
     width: 80%;
-    margin: 100px auto;
+    margin: 120px auto; /* Réduire la marge pour éviter la coupure */
     padding: 20px;
     background: rgba(255, 255, 255, 0.1);
     color: white;
@@ -144,17 +165,12 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-/* Style du tooltip */
+/* Tooltip */
 .tooltip {
     position: relative;
     display: inline-block;
 }
 
-/* Contenu du tooltip (caché par défaut) */
 .tooltip .tooltip-text {
     visibility: hidden;
     background-color: rgba(0, 0, 0, 0.8);
@@ -163,7 +179,7 @@ html {
     padding: 5px 10px;
     border-radius: 5px;
     position: absolute;
-    bottom: -30px; /* Position sous le bouton */
+    bottom: -30px;
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
@@ -172,28 +188,10 @@ html {
     transition: opacity 0.3s ease-in-out;
 }
 
-/* Affichage du tooltip au survol */
 .tooltip:hover .tooltip-text {
     visibility: visible;
     opacity: 1;
 }
-
-
-html, body {
-    height: 100%;
-    overflow-x: hidden; /* Empêche le scroll horizontal */
-    overflow-y: auto; /* Permet uniquement le scroll si nécessaire */
-}
-
-
-#content {
-    min-height: calc(100vh - 80px); /* Hauteur de l'écran - taille de la navbar */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 
 /* Couleurs des boutons */
 .blue { background-color: #52aedf; }
@@ -207,3 +205,30 @@ html, body {
 
 .dark { background-color: #333; }
 .dark:hover { background-color: #555; }
+
+/* Contenu principal */
+#content {
+    min-height: calc(100vh - 80px);
+    transition: opacity 0.3s ease-in-out; /* Hauteur de l'écran - taille de la navbar */
+    margin: 0 auto; /* Centrer le contenu */
+    padding: 20px; /* Ajouter un peu de padding */
+}
+#content_contact {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out;
+    justify-content: center;
+    margin: 0 auto; /* Centrer le contenu */
+    padding: 20px; /* Ajouter un peu de padding */
+}
+
+#projets {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s ease-in-out;
+    justify-content: center;
+    margin: 0 auto; /* Centrer le contenu */
+    padding: 20px; /* Ajouter un peu de padding */
+}

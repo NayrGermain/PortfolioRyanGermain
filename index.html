@@ -12,10 +12,10 @@
     <!-- Bannière fixe -->
     <div class="navbar">
         <div class="tooltip">
-            <a href="index.html" class="nav-btn">
+            <a id="accueilBtn" class="nav-btn">
                 <img src="images/_profile.png" alt="Accueil"> 
             </a>
-            <span class="tooltip-text">Accueil</span>
+            <span class="tooltip-text">Profile</span>
         </div>        
         
         <div class="tooltip">
@@ -24,23 +24,30 @@
         </div>   
         
         <div class="tooltip">
-             <a href="#projets" class="nav-btn"><img src="images/folder.png" alt="Projets"></a>
+             <a id="projet" class="nav-btn"><img src="images/burgermenu.png" alt="Projets"></a>
             <span class="tooltip-text">Mes Projets</span>
         </div>   
         
         <div class="tooltip">
-            <a href="contact.html" class="nav-btn">
-                <img src="images/_mail.png" alt="Contact">
+            <a id="contactBtn" class="nav-btn">
+                <img src="images/abc.png" alt="Contact">
             </a>
             <span class="tooltip-text">Contactez-moi !</span>
         </div>   
+
+        <div class="tooltip">
+             <button id="toggleTheme" class="nav-btn">Changer le fond</button>
+        </div> 
+       
+
     </div>
 
-    <div id="content">
+    <div id="content" id="top">
+        <!-- Carte principale -->
         <div class="card">
             <!-- Photo de profil -->
             <div class="profile-pic">
-                <img src="images/profile.png" alt="Ryan Germain">
+                <img src="images/moi.png" alt="Ryan Germain">
             </div>
             <h2 class="subtitle">Étudiant en Informatique</h2>
             <h1 class="title">Ryan Germain</h1>
@@ -57,44 +64,84 @@
             </div>
         </div>
 
-        <!-- Bloc de texte en dessous, avec un ID "about" -->
+        <!-- Section "À propos de moi" -->
         <div id="about" class="text-block">
             <h2>À propos de moi</h2>
+            </br>
+            <!-- Parcours -->
+            <h3>Parcours</h3>
+        </br>
             <p>
-                Passionné par l’informatique, je me spécialise en cybersécurité et développement web.
-                J’aime apprendre de nouvelles technologies et relever des défis techniques.
+                Je suis actuellement étudiant en première année de Master Informatique spécialisé en Sécurité des Contenus, Réseaux et Systèmes (SeCReTs) à l'université de Versailles et Saint-Quentin-en-Yvelines. Avant cela, j'ai obtenu ma licence en Informatique, où j'ai acquis des bases solides en programmation, en gestion de projets et en systèmes d'information.
             </p>
             <p>
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-                Salut, je suis Arthur Danjou, étudiant en mathématiques spécialisé en Statistiques à l'Université Paris-Dauphine en France.
-
-                Avec une compréhension profonde des technologies émergentes, je suis au cœur d'un domaine en pleine expansion. Ma formation en mathématiques me donne une longueur d'avance pour comprendre les concepts et les théories qui sous-tendent ces technologies et à les concevoir efficacement.
-                
-                En tant qu'ingénieur logiciel et étudiant en mathématiques, mon expertise couvre 
-                TypeScript
-                , 
-                Vue
-                , 
-                Nuxt
-                , 
-                Adonis
-                , 
-                Java
-                , 
-                Python
-                , 
-                R
-                , ce qui me permet de comprendre les différents besoins des projets mathématiques et de proposer les meilleures solutions. J'ai également appris d'autres technologies importantes, telles que 
-                Docker
-                , 
-                Redis
-                , 
-                MySQL
-                 et 
-                Git
-                 pour compléter mes connaissances.
+                Mon parcours académique m'a permis de développer une forte appétence pour la résolution de problèmes techniques et une curiosité pour les nouvelles technologies. J'ai également eu l'occasion de participer à des projets de groupe, ce qui a renforcé mes compétences en travail d'équipe et en communication.
             </p>
+        </br>
+            <!-- Compétences -->
+            <h3>Compétences</h3>
+        </br>
+            <p>
+                Au fil de mes études et de mes projets personnels, j'ai développé un large éventail de compétences techniques et transversales :
+            </p>
+            <ul>
+                <li><strong>Langages de programmation</strong> : Python, Java, JavaScript, C, PHP.</li>
+                <li><strong>Développement web</strong> : HTML, CSS, React, Node.js, Django.</li>
+                <li><strong>Cybersécurité</strong> : Analyse de vulnérabilités, chiffrement, sécurité des réseaux.</li>
+                <li><strong>Outils et technologies</strong> : Git, Docker, MySQL, Redis, Linux.</li>
+                <li><strong>Soft skills</strong> : Travail d'équipe, gestion de projet, résolution de problèmes.</li>
+            </ul>
+
+        </br>
+            <!-- Passions -->
+            <h3 class = "blue">Passions</h3>
+        </br>
+        <div id="passions" ></div>
+            <p>
+                En dehors de mes études, je suis passionné par plusieurs domaines qui enrichissent ma vision de l'informatique :
+            </p>
+            <ul>
+                <li><strong>Cybersécurité</strong> : J'adore explorer les défis liés à la protection des données et à la sécurisation des systèmes.</li>
+                <li><strong>Développement web</strong> : Créer des applications web fonctionnelles et esthétiques est l'une de mes passions.</li>
+                <li><strong>Apprentissage continu</strong> : Je suis constamment à la recherche de nouvelles technologies et de nouvelles méthodes pour améliorer mes compétences.</li>
+                <li><strong>Jeux de réflexion</strong> : Les énigmes, les CTF (Capture The Flag) et les jeux de logique sont pour moi une source d'inspiration et de motivation.</li>
+            </ul>
+        </div>
+
+        <!-- Section "Projets" -->
+        <div id="projets" class="text-block">
+            <h2>Mes Projets</h2>
+            <p>
+                Voici quelques-uns des projets sur lesquels j'ai travaillé :
+            </p>
+            <ul>
+                <li><strong>Projet 1</strong> : Description du projet 1.</li>
+                <li><strong>Projet 2</strong> : Description du projet 2.</li>
+                <li><strong>Projet 3</strong> : Description du projet 3.</li>
+            </ul>
+        </div>
+
+        <div id="content_contact">
+        
+            <!-- Boutons sociaux -->
+            <div class="buttons" id="contacts"><p>
+                <h2>
+                    Mes différents contacts
+                </h2>
+            </p>
+                <a href="https://www.linkedin.com/in/germainryan/" class="btn blue" target="_blank">
+                    <img src="images/_linkedin.png" alt="LinkedIn"> LinkedIn
+                </a>
+                <a href="https://github.com/NayrGermain" class="btn purple" target="_blank">
+                    <img src="images/_github.png" alt="GitHub"> GitHub
+                </a>
+                <a href="https://www.root-me.org/Nayr-967607" class="btn red" target="_blank">
+                    <img src="images/_rootme.png" alt="Root Me"> Root Me
+                </a>
+                <a href="mailto:ryangermain.2004@gmail.com" class="btn dark">
+                    <img src="images/abc.png" alt="Email"> Mon E-mail
+                </a>
+            </div>
         </div>
     </div>
 </body>
