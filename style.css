@@ -1,0 +1,209 @@
+/* Navbar fixe */
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 20px;
+    /*background: rgba(26, 26, 26, 0.8);*/
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+}
+
+/* Style des boutons navbar */
+.nav-btn {
+    background: #444;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-btn img {
+    width: 32px;
+    height: 32px;
+}
+
+.nav-btn:hover {
+    background: #666;
+}
+
+/* Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200vh;
+}
+
+/* Carte principale */
+.card {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    width: 500px;
+    margin: 100px auto; /* Centre horizontalement et garde un espace en haut */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Photo de profil */
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 10px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Titres */
+.subtitle {
+    color: gray;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 14px;
+    color: #bbb;
+    margin: 10px 0;
+}
+
+/* Boutons */
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 300px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
+}
+
+.btn img {
+    width: 40px;
+    height: 40px;
+}
+
+
+.text-block {
+    width: 80%;
+    margin: 100px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Style du tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Contenu du tooltip (caché par défaut) */
+.tooltip .tooltip-text {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -30px; /* Position sous le bouton */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Affichage du tooltip au survol */
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+html, body {
+    height: 100%;
+    overflow-x: hidden; /* Empêche le scroll horizontal */
+    overflow-y: auto; /* Permet uniquement le scroll si nécessaire */
+}
+
+
+#content {
+    min-height: calc(100vh - 80px); /* Hauteur de l'écran - taille de la navbar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Couleurs des boutons */
+.blue { background-color: #52aedf; }
+.blue:hover { background-color: #005f8f; }
+
+.purple { background-color: #6a0dad; }
+.purple:hover { background-color: #570a91; }
+
+.red { background-color: #dd2443; }
+.red:hover { background-color: #a4031f; }
+
+.dark { background-color: #333; }
+.dark:hover { background-color: #555; }
