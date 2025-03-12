@@ -36,7 +36,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const body = document.body;
     const button = document.getElementById("toggleTheme");
 
-    let isGradient = false;
+    let isGradient = true;
+    
+    body.classList.add("gradient-bg");
+
 
     button.addEventListener("click", function () {
         if (isGradient) {
@@ -48,8 +51,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         isGradient = !isGradient;
     });
-
-    // ✅ Appliquer directement le mode noir au chargement pour éviter un effet visuel incorrect
-    body.classList.add("black-bg");
 });
 

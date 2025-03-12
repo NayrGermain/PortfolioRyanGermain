@@ -8,7 +8,7 @@
     <script src="script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
-<body id="body">
+<body id="body" class = "gradient-bg">
     <!-- Bannière fixe -->
     <div class="navbar">
         <div class="tooltip">
@@ -19,7 +19,7 @@
         </div>        
         
         <div class="tooltip">
-             <a href="cv.pdf" class="nav-btn"><img src="images/cv.png" alt="CV"></a>
+             <a href="cv1.pdf" class="nav-btn"><img src="images/cv.png" alt="CV"></a>
             <span class="tooltip-text">Mon CV</span>
         </div>   
         
@@ -36,7 +36,8 @@
         </div>   
 
         <div class="tooltip">
-             <button id="toggleTheme" class="nav-btn">Changer le fond</button>
+             <a id="toggleTheme" class="nav-btn"> <img src="images/color.png" alt="color"></a>
+             <span class="tooltip-text">Changer le fond</span>
         </div> 
        
 
@@ -69,28 +70,37 @@
             <h2>À propos de moi</h2>
             </br>
             <!-- Parcours -->
-            <h3>Parcours</h3>
+            <h3 class ="red">Parcours</h3>
         </br>
             <p>
-                Je suis actuellement étudiant en première année de Master Informatique spécialisé en Sécurité des Contenus, Réseaux et Systèmes (SeCReTs) à l'université de Versailles et Saint-Quentin-en-Yvelines. Avant cela, j'ai obtenu ma licence en Informatique, où j'ai acquis des bases solides en programmation, en gestion de projets et en systèmes d'information.
+                Je suis actuellement étudiant en première année de Master Informatique spécialisé en Sécurité des Contenus, Réseaux et Systèmes (SeCReTs) à l'université de Versailles et Saint-Quentin-en-Yvelines. 
+                Avant cela, j'ai obtenu ma licence en Informatique, où j'ai acquis des bases solides en programmation, en gestion de projets et en systèmes d'information.
             </p>
             <p>
-                Mon parcours académique m'a permis de développer une forte appétence pour la résolution de problèmes techniques et une curiosité pour les nouvelles technologies. J'ai également eu l'occasion de participer à des projets de groupe, ce qui a renforcé mes compétences en travail d'équipe et en communication.
+                Mon parcours académique m'a permis de développer ma dextérité à résoudre des problèmes techniques 
+                et une curiosité pour les nouvelles technologies. J'ai également eu l'occasion de participer à des projets de groupe
+                , ce qui a renforcé mes compétences en travail d'équipe et en communication.
             </p>
         </br>
             <!-- Compétences -->
-            <h3>Compétences</h3>
+            <h3 class ="purple">Compétences</h3>
         </br>
+        
             <p>
                 Au fil de mes études et de mes projets personnels, j'ai développé un large éventail de compétences techniques et transversales :
             </p>
+            <div id = "skills">
             <ul>
-                <li><strong>Langages de programmation</strong> : Python, Java, JavaScript, C, PHP.</li>
-                <li><strong>Développement web</strong> : HTML, CSS, React, Node.js, Django.</li>
-                <li><strong>Cybersécurité</strong> : Analyse de vulnérabilités, chiffrement, sécurité des réseaux.</li>
-                <li><strong>Outils et technologies</strong> : Git, Docker, MySQL, Redis, Linux.</li>
-                <li><strong>Soft skills</strong> : Travail d'équipe, gestion de projet, résolution de problèmes.</li>
+                <li><strong>Langages de programmation</strong> : Java, JavaScript, C, PHP, Python, C#, C++, Ocaml, SQL...</li>
+                <li><strong>Développement Web</strong> : HTML, CSS, React, Node.js, Mongodb, Websocket...</li>
+                <li><strong>Outils et technologies</strong> : Git, MySQL, Oracle, Linux.</li>
+                <li><strong>Soft skills</strong> : Travail d'équipe, gestion de projet, résolution de problèmes, curieux.</li>
             </ul>
+        </div>
+        <br>
+        <p>
+            Je m’intéresse aujourd’hui à la cybersécurité, son enjeu et ses défis !
+        </p>
 
         </br>
             <!-- Passions -->
@@ -99,26 +109,96 @@
         <div id="passions" ></div>
             <p>
                 En dehors de mes études, je suis passionné par plusieurs domaines qui enrichissent ma vision de l'informatique :
-            </p>
+            </p></br>
             <ul>
-                <li><strong>Cybersécurité</strong> : J'adore explorer les défis liés à la protection des données et à la sécurisation des systèmes.</li>
-                <li><strong>Développement web</strong> : Créer des applications web fonctionnelles et esthétiques est l'une de mes passions.</li>
-                <li><strong>Apprentissage continu</strong> : Je suis constamment à la recherche de nouvelles technologies et de nouvelles méthodes pour améliorer mes compétences.</li>
-                <li><strong>Jeux de réflexion</strong> : Les énigmes, les CTF (Capture The Flag) et les jeux de logique sont pour moi une source d'inspiration et de motivation.</li>
-            </ul>
+                <li><strong>Le Sport</strong> : Le sport a toujours été une passion pour moi et m'as aussi permis d'acquérir certains talents notamment
+                grâce aux sports collectifs que 
+
+                <div class="tooltip">
+                    <a id="sportco"> j'ai pratiqué</a>
+                    <span class="tooltip-text">   Volley-ball 🏐, Basket-Ball 🏀</span>
+               </div>
+              
+                
+                ou j'ai pu développer ma communication, mon entraide
+            , ma compréhension d'autrui... J'ai également pratiqué d'autres sport plus individuel comme la 
+            <div class="tooltip">
+                <a id="gym"> gymnastique</a>
+                <span class="tooltip-text">GAM pour être précis 🤸</span>
+           </div> 
+            ,
+
+             la musculation et bien d'autres
+            qui eux, ont eu un impact sur mes capacités à être résilient, persévérant et surtout le fait de se remettre en question </li>
+        </br>
+            <li><strong>Développement en tout genre</strong> : Créer des applications fonctionnelles et esthétiques est l'une de mes passions. J'investis
+                beaucoup de mon temps libre à développer des mini-projets tel que des 
+                <div class="tooltip">
+                    <a id="jeux-vidéos"> jeux-vidéos</a>
+                    <span class="tooltip-text">Tetris, Pong, Snake...</br>Tout y passe 🎮</span>
+               </div>
+                
+                
+                ou logiciel qui me permettent de pratiquer.
+            </li></br>
+                <li><strong>Les jeux vidéos</strong> 
+                    : Les jeux vidéo sont bien plus qu’un simple divertissement pour moi. 
+                    Ils représentent un univers riche en 
+                    <div class="tooltip">
+                        <a id="storytelling"> storytelling</a>
+                        <span class="tooltip-text">The Last of Us (1&2), Life is Strange </span>
+                   </div> 
+                    
+                    
+                    , en 
+                    
+                    <div class="tooltip">
+                        <a id="design"> design</a>
+                        <span class="tooltip-text">Hollow Knight, Cuphead</span>
+                   </div> 
+                    
+                    et en 
+                    <div class="tooltip">
+                        <a id="meca"> mécanique d’interaction</a>
+                        <span class="tooltip-text">Dark Souls & Elden Ring</span>
+                   </div> 
+                    
+                    
+                    . Jouer m’a permis de développer 
+                    une approche analytique des systèmes complexes, une capacité d’adaptation rapide et un esprit critique sur l’expérience utilisateur.
+                    ils représentent un véritable terrain de challenge et d’amélioration continue. J’ai toujours aimé les 
+                    
+                    <div class="tooltip">
+                        <a id="jeux-vidéos">jeux compétitifs</a>
+                        <span class="tooltip-text">La liste est trop longue<br>Pour tous les citer ...</span>
+                   </div> 
+                    
+                    
+                    , 
+                    ceux qui demandent réflexion stratégique, prise de décision rapide et coordination parfaite. Que ce soit à travers l’esport
+                     ou des parties classées, j’apprécie l’adrénaline des affrontements où chaque détail compte.
+                </li></br>
+               </ul>
         </div>
 
         <!-- Section "Projets" -->
         <div id="projets" class="text-block">
             <h2>Mes Projets</h2>
+            <br>
             <p>
                 Voici quelques-uns des projets sur lesquels j'ai travaillé :
+                <br><span class ="subtitle">Disponible sur mon GitHub et/ou via les liens</span>
             </p>
+            <br>
             <ul>
-                <li><strong>Projet 1</strong> : Description du projet 1.</li>
-                <li><strong>Projet 2</strong> : Description du projet 2.</li>
-                <li><strong>Projet 3</strong> : Description du projet 3.</li>
+                <li><strong><a href ="https://github.com/NayrGermain/VoteMeta" class ="white">VoteMeta</a></strong> : Plateforme de vote complètement anonyme</li>
+                <li><strong><a href ="https://github.com/NayrGermain/Cave-Game" class ="white">Cave Game </a></strong> : Jeu d'extraction de mineurs dans une grotte</li>
+                <li><strong><a href ="https://github.com/NayrGermain/PlatformGame" class ="white">Platform Game </a></strong> : Jeu de survie et plateforme type Dino T-Rex</li>
             </ul>
+            <br><br><br>
+            <p><h4>
+                N'hésitez pas à consulter mon GitHub pour voir d'autres de mes projets</h4>
+            </p>
         </div>
 
         <div id="content_contact">

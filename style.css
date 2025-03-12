@@ -3,12 +3,13 @@
 .navbar {
     position: fixed;
     top: 0;
-    right: 20px;
+    right: 0px;
     padding: 10px;
     border-radius: 10px;
     display: flex;
     gap: 10px;
     z-index: 1000;
+    background-color:black;
 }
 
 /* Style des boutons navbar */
@@ -54,7 +55,7 @@
 
 body {
     background:#011f4b; /* Couleur de fond par défaut */
-    background-image: linear-gradient(45deg, #010556, #1c377b, #281756, #2a074d);
+    background-image: linear-gradient(45deg, #011f4b, #1c377b, #281756, #2a074d);
     background-size: 600% 600%;
     color: white;
     display: block;
@@ -197,6 +198,10 @@ body {
 .blue { background-color: #52aedf; }
 .blue:hover { background-color: #005f8f; }
 
+.white { color: rgb(158, 158, 158); }
+.white:hover { color: #c6c6c6; }
+
+
 .purple { background-color: #6a0dad; }
 .purple:hover { background-color: #570a91; }
 
@@ -205,6 +210,25 @@ body {
 
 .dark { background-color: #333; }
 .dark:hover { background-color: #555; }
+
+#gym {color: orange;}
+#gym:hover {color: rgba(255, 166, 0, 0.645);}
+
+#sportco {color : lightskyblue}
+#sportco:hover {color : rgb(69, 106, 129)}
+
+#storytelling {color : rgb(205, 83, 61)}
+#storytelling:hover {color : rgb(105, 43, 33)}
+
+#design {color: rgb(174, 0, 255);}
+#design:hover {color: rgba(126, 7, 106, 0.645);}
+
+#meca {color: rgb(252, 255, 93);}
+#meca:hover {color: rgba(174, 196, 9, 0.645);}
+
+#jeux-vidéos {color: rgb(19, 195, 36);}
+#jeux-vidéos:hover {color: rgba(38, 182, 45, 0.645);}
+
 
 /* Contenu principal */
 #content {
@@ -231,4 +255,11 @@ body {
     justify-content: center;
     margin: 0 auto; /* Centrer le contenu */
     padding: 20px; /* Ajouter un peu de padding */
+    flex-direction: column;
+}
+
+#skills {
+    text-align: left;
+    padding-left: 25%;
+    margin-top: 10px;
 }
